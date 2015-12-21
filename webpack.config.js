@@ -16,7 +16,7 @@ module.exports = {
   devtool: 'source-map',
   module: {
     loaders: [
-      { 
+      {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
         loader: 'babel-loader',
@@ -24,7 +24,7 @@ module.exports = {
           presets: ['es2015', 'react', 'stage-0']
         }
       },
-      { 
+      {
         test: /\.less$/,
         loader: "style!css!autoprefixer!less"
       },
