@@ -3,10 +3,10 @@ export default class BlackTriangle {
     this.angle = 0;
 
     this.innerEl = document.createElement('div');
-    this.innerEl.className = "BlackTriangle-inner";
+    this.innerEl.className = 'BlackTriangle-inner';
 
-    this.el = document.querySelector(selector)
-    this.el.className = "BlackTriangle";
+    this.el = document.querySelector(selector);
+    this.el.className = 'BlackTriangle';
     this.el.appendChild(this.innerEl);
   }
 
