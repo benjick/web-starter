@@ -10,8 +10,8 @@ module.exports = {
     './src/main',
   ],
   output: {
-      publicPath: '/',
-      filename: 'main.js'
+    publicPath: '/',
+    filename: 'main.js',
   },
   debug: true,
   devtool: 'source-map',
@@ -24,9 +24,9 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        loader: "style!css!autoprefixer!less"
+        loader: 'style!css!autoprefixer!less',
       },
-    ]
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -34,6 +34,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: "./src"
-  }
+    contentBase: './src',
+  },
 };
