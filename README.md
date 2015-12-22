@@ -1,15 +1,17 @@
 # webpack-black-triangle
 
-A minimal, development-focussed template to get you up and running with Webpack, Babel & LESS.
+A minimal, development-focused template to get you up and running with Webpack, Babel & LESS.
 
 Read how it works at [jamesknelson.com](http://jamesknelson.com/write-es2015-with-instant-feedback-using-webpack-dev-server-and-babel/).
 
 **Things it does**:
 
-- Makes ES6 "just work"
+- Makes ES6 and ES7 "just work"
+- React / Redux
 - Compiles and includes your LESS files
 - Serves your files
 - Automatically recompiles/reloads your page when JavaScript/LESS files change
+- Linting according to AirBnB
 - Decide where your files go (to a degree)
 
 **Things it doesn't do**:
@@ -22,7 +24,7 @@ Read how it works at [jamesknelson.com](http://jamesknelson.com/write-es2015-wit
 Just `git clone` & `npm install`:
 
 ```
-git clone https://github.com/jamesknelson/webpack-black-triangle.git
+git clone https://github.com/benjick/webpack-black-triangle.git
 cd webpack-black-triangle
 npm install
 ```
@@ -40,4 +42,3 @@ Then open [localhost:8080](http://localhost:8080/).
 ## Why a black triangle?
 
 Because [this](http://rampantgames.com/blog/?p=7745).
-
