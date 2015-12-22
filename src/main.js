@@ -1,19 +1,14 @@
-import BlackTriangle from './components/BlackTriangle';
-import ReactDOM from 'react-dom';
 import React from 'react';
-import ReactTest from './components/ReactTest';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './containers/App';
+import configureStore from './store/configureStore';
 
-const triangle = new BlackTriangle('#triangle');
+const store = configureStore();
 
-window.setInterval(
-  () => {
-    triangle.rotate(1);
-    triangle.render();
-  },
-  20
-);
-
-ReactDOM.render(
-  <ReactTest />,
-  document.getElementById('reacttest')
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
