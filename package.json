@@ -7,6 +7,7 @@
     "babel-polyfill": "^6.0.16",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "immutable": "^3.7.6",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.2",
