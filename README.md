@@ -1,27 +1,8 @@
 # webpack-black-triangle
 
-A minimal, development-focused template to get you up and running with Webpack, Babel & LESS.
-
-Read how it works at [jamesknelson.com](http://jamesknelson.com/write-es2015-with-instant-feedback-using-webpack-dev-server-and-babel/).
-
-**Things it does**:
-
-- Makes ES6 and ES7 "just work"
-- React / Redux
-- Compiles and includes your LESS files
-- Serves your files
-- Automatically recompiles/reloads your page when JavaScript/LESS files change
-- Linting according to AirBnB
-- Decide where your files go (to a degree)
-
-**Things it doesn't do**:
-
-- Handle your deployment build
-- Include any runtime dependencies (other than babel's polyfill)
+Webpack, React with hot reload, PostCSS, ESLint (Airbnb), precommit hook, ECMA stage-0
 
 ## Install with three lines
-
-Just `git clone` & `npm install`:
 
 ```
 git clone https://github.com/benjick/webpack-black-triangle.git
