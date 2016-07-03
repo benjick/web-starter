@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import AwesomeComponent from './components/AwesomeComponent';
+import App from './App';
 
 render(
-  <AwesomeComponent />,
+  <App />,
   document.getElementById('root')
 );
