@@ -36,21 +36,13 @@ const common = {
     }),
   ],
   postcss: () => [precss, autoprefixer],
-  devServer: {
-    contentBase: './src',
-    stats: 'errors-only',
-    inline: true,
-    progress: true,
-    proxy: {
-      '/api/*': 'http://localhost:8080',
-    },
-  },
 };
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = merge(common, {
   });
 } else {
+  // Development
   module.exports = merge(common, {
     entry: [
       ...common.entry,
@@ -58,5 +50,14 @@ if (process.env.NODE_ENV === 'production') {
       'webpack/hot/dev-server',
     ],
     debug: true,
+    devServer: {
+      contentBase: './src',
+      stats: 'errors-only',
+      inline: true,
+      progress: true,
+      proxy: {
+        '/api/*': 'http://localhost:8080',
+      },
+    },
   });
 }
