@@ -28,16 +28,27 @@ const common = {
       },
     ],
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-    }),
-  ],
   postcss: () => [precss, autoprefixer],
 };
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = merge(common, {
+    devtool: 'cheap-module-source-map',
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('production'),
+        },
+        __DEVELOPMENT__: false,
+      }),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false,
+        },
+      }),
+    ],
   });
 } else {
   // Development
@@ -57,5 +68,10 @@ if (process.env.NODE_ENV === 'production') {
         '/api/*': 'http://localhost:8080',
       },
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      }),
+    ],
   });
 }
