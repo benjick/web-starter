@@ -1,4 +1,4 @@
-# web-starter
+# web-starter [![Build Status](https://travis-ci.org/benjick/web-starter.svg?branch=master)](https://travis-ci.org/benjick/web-starter)
 
 * React (hot reload)
 * Webpack
@@ -7,6 +7,7 @@
 * ESLint (airbnb)
 * AVA
 * pre-commit hooks
+* Travis
 
 ## Install with three lines
 
