@@ -4,8 +4,6 @@ const merge = require('webpack-merge');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
-console.log(process.env.NODE_ENV);
-
 const common = {
   entry: [
     './src/css/main.css',
