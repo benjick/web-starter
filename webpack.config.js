@@ -1,21 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
-module.exports = {
+console.log(process.env.NODE_ENV);
+
+const common = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
-    'babel-polyfill',
     './src/css/main.css',
+    'whatwg-fetch',
     './src/main',
   ],
   output: {
     publicPath: '/',
     filename: 'main.js',
   },
-  debug: true,
   devtool: 'source-map',
   module: {
     loaders: [
@@ -46,3 +46,17 @@ module.exports = {
     },
   },
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = merge(common, {
+  });
+} else {
+  module.exports = merge(common, {
+    entry: [
+      ...common.entry,
+      'webpack-dev-server/client?http://localhost:8080',
+      'webpack/hot/dev-server',
+    ],
+    debug: true,
+  });
+}

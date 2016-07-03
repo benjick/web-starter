@@ -1,5 +1,12 @@
 $background: #eee;
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html, body {
   height: 100%;
   min-height: 100%;

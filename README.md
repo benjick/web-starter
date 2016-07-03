@@ -8,6 +8,7 @@
 * AVA
 * pre-commit hooks
 * Travis
+* Fetch polyfill
 
 ## Install with three lines
 
