@@ -12,8 +12,8 @@
 ## Install with three lines
 
 ```
-git clone https://github.com/benjick/webpack-black-triangle.git
-cd webpack-black-triangle
+git clone https://github.com/benjick/web-starter.git
+cd web-starter
 npm install
 ```
 
@@ -27,6 +27,6 @@ npm start
 
 Then open [localhost:8080](http://localhost:8080/).
 
-## Why a black triangle?
+---
 
-Because [this](http://rampantgames.com/blog/?p=7745).
+Based on https://github.com/jamesknelson/webpack-black-triangle

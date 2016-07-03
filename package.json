@@ -1,7 +1,7 @@
 {
-  "name": "webpack-black-triangle",
+  "name": "web-starter",
   "version": "0.1.0",
-  "description": "A minimal webpack/ES6 project template with a spinning black triangle",
+  "description": "Web starter kit",
   "main": "src/main.js",
   "dependencies": {
     "babel-polyfill": "^6.9.1",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesknelson/webpack-black-triangle.git"
+    "url": "https://github.com/benjick/web-starter.git"
   },
   "scripts": {
     "test": "ava --tap | tap-spec",
@@ -56,21 +56,11 @@
     "test",
     "lint"
   ],
-  "keywords": [
-    "webpack",
-    "webpack-dev-server",
-    "template",
-    "starter",
-    "es6",
-    "babel"
-  ],
   "babel": {
     "presets": ["react", "es2015", "stage-0"]
   },
   "ava": {
     "require": ["babel-register"],
     "babel": "inherit"
-  },
-  "author": "James K Nelson <james@jamesknelson.com>",
-  "license": "MIT"
+  }
 }
