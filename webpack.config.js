@@ -25,10 +25,6 @@ module.exports = {
         loaders: ['react-hot', 'babel-loader'],
       },
       {
-        test: /\.less$/,
-        loader: 'style!css!autoprefixer!less',
-      },
-      {
         test: /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader',
       },
