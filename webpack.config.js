@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         include: path.join(__dirname, 'src'),
-        loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-0'],
+        loaders: ['react-hot', 'babel-loader'],
       },
       {
         test: /\.less$/,

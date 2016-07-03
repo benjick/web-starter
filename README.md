@@ -1,6 +1,12 @@
-# webpack-black-triangle
+# web-starter
 
-Webpack, React with hot reload, PostCSS, ESLint (Airbnb), precommit hook, ECMA stage-0
+* React (hot reload)
+* Webpack
+* Babel (stage-0)
+* PostCSS
+* ESLint (airbnb)
+* AVA
+* pre-commit hooks
 
 ## Install with three lines
 
