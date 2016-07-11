@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const common = {
   entry: [
@@ -12,9 +13,17 @@ const common = {
   ],
   output: {
     publicPath: '/',
-    filename: 'main.js',
+    path: `${__dirname}/dist`,
+    filename: '[hash].js',
   },
   devtool: 'source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: 'body',
+      filename: 'index.html',
+    }),
+  ],
   module: {
     loaders: [
       {
